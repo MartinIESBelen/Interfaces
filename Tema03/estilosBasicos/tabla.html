@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Ejercicio prático con Tablas</h1>
+        <div id="tabla">
+            
+            <table border="1">
+                
+                <tr>
+                    <td colspan="1"></td>
+                    <td class="azul" colspan="3"><a><img style="width:100px;" src="img/mp3.jpeg"></a></td>
+                    <td class="azul" colspan="2"><a><img style="width:100px;" src="img/ipod.jpeg"></a></td>
+                </tr>
+                <tr id="capacidad">
+                    <td class="caracteristica">Capacidad</td>
+                    <td>2GB</td>
+                    <td>4GB</td>
+                    <td>8GB</td>
+                    <td>32GB</td>
+                    <td>2GB</td>
+                </tr>
+                <tr>
+                    <td class="caracteristica">Colores</td>
+                    <td>Blanco</td>
+                    <td>
+                        <ul>
+                            <li><p>Negro</p></li>
+                            <li><p>Rosa</p></li>
+                            <li><p>Dorado</p></li>
+                        </ul>
+                    </td>
+                    <td>Negro</td>
+                    <td class="azul" colspan="2">
+                        <ul >
+                            <li><p>Negro</p></li>
+                            <li><p>Blanco</p></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tr>
+                <tr class="azul">
+                    <td class="caracteristica">Pantalla</td>
+                    <td colspan="3">3 pulgadas</td>
+                    <td colspan="2">7 pulgadas</td>
+                </tr>
+                <tr class="azul">
+                    <td rowspan="2" class="caracteristica">Tiempo de carga</td>
+                    <td colspan="3" rowspan="2">1 hora</td>
+                    <td class="amarillo" colspan="2">5 horas</td>
+                </tr>
+                <tr>
+                    <td class="azul" colspan="3">30 minutos para 75%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="horario">
+            <h1>Horario de clase curso 2018-2019</h1>
+            <table border="1">
+                <tr id="dias">
+                    <td>Horas</td>
+                    <td>Lunes</td>
+                    <td>Martes</td>
+                    <td>Miercoles</td>
+                    <td>Jueves</td>
+                    <td>Viernes</td>
+                </tr>
+                <tr>
+                    <td class="verde">8:00</td>
+                    <td rowspan="2">Matemáticas</td>
+                    <td>Lengua</td>
+                    <td>Inglés</td>
+                    <td colspan="2">Ciencia</td>
+                </tr>
+                <tr>
+                    <td class="verde">9:00</td>
+                    <td>historia</td>
+                    <td>Ciencias</td>
+                    <td>Matemáticas</td>
+                    <td>Lengua</td>
+                    
+                </tr>
+                <tr>
+                    <td class="verde">10:00</td>
+                    <td colspan="5">RECREO</td>
+                </tr>
+                <tr>
+                    <td class="verde">10:30</td>
+                    <td>Inglés</td>
+                    <td rowspan="2">Ciencias</td>
+                    <td>Matemáticas</td>
+                    <td>Lengua</td>
+                    <td>Historia</td>
+                </tr>
+                <tr>
+                    <td class="verde">11:30</td>
+                    <td>Historia</td>
+                    <td>Ciencias</td>
+                    <td>Matemáticas</td>
+                    <td>Inglés</td>
+                </tr>
+            </table>
+            <div id="input">
+                <label for="email">Email*</label>
+                <input type="text" name="email" >
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/*Elementos compartidos*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+
+/*Tabla mp3*/
+#tabla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.caracteristica{  
+    background-color: red;
+    color: white;
+    font-size: 30px;
+}
+
+#capacidad{
+    background-color: gray;
+    color: black;
+    height: 30px;
+    font-size: 60px;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.amarillo{
+    background-color: yellow;
+    font-size: 50px;
+}
+
+ul{
+    color: red;
+}
+
+/*Tabla horarios*/
+.verde{
+    background-color: green;
+}
+
+#horario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#dias{
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+#horario, #input{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+
