@@ -1,0 +1,370 @@
+/* GENERALES */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333; /* Color de texto base */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Hereda el color del padre si no está definido */
+}
+
+.btn {
+    padding: 10px 25px;
+    border: 1px solid #333;
+    background: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+    color: white;
+}
+
+.btn-small { /* Para botones dentro de tarjetas/productos */
+    padding: 8px 20px;
+    border: 1px solid #666;
+    background: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-small:hover {
+    background: #666;
+    color: white;
+}
+
+section {
+    padding: 40px; /* Padding base para secciones */
+    text-align: center;
+}
+
+/* HEADER */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo img {
+    height: 80px; /* Mantener solo la altura para consistencia */
+    width: auto;
+}
+
+.menu a {
+    margin: 0 15px;
+    color: black;
+}
+
+.search-box input {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.search-box button {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    background: #f4f4f4;
+    cursor: pointer;
+    margin-left: -1px; /* Para que parezca un solo componente */
+}
+
+/* OFFER BANNER (OFERTA) */
+.offer-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #e5d5cb, #d1a387) ;
+    
+    padding: 40px 50px;
+    gap: 50px;
+}
+
+.offer-image img {
+    width: 250px;
+    display: block;
+}
+
+.offer-info {
+    text-align: left;
+}
+
+.offer-info .small-text {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.offer-info h2 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #a0522d; /* Un color que combine con el fondo */
+}
+.offer-info h3 {
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+/* PRODUCT CARDS (DOS TARJETAS) */
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.card {
+    text-align: center;
+    max-width: 250px;
+}
+
+.card img{
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px; /* Añade margen inferior */
+    border: 1px solid #eee;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+/* NEW ARRIVALS (NUEVECITO) */
+.new-arrivals {
+    padding: 40px 0;
+    text-align: center;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), /* Aumentado la opacidad del overlay */
+        url("../img/vistasRonda01.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.new-arrivals h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #444;
+}
+
+.products-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 40px;
+}
+
+.product-item {
+    background: white; /* Cambiado de #eee a white para destacar sobre el fondo */
+    padding: 20px;
+    width: 230px;
+    /* height: 300; - Eliminado para dejar que el contenido determine la altura */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-item img{
+    width: 100%; /* Ajuste al 100% del contenedor */
+    height: 200px; /* Reducida la altura para que la tarjeta sea más compacta */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.product-item h3 {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.product-item p {
+    margin: 5px 0 15px;
+    font-weight: bold;
+    color: #cc0000; /* Color para el precio */
+}
+
+.new-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #b3e986;
+    color: #333;
+    padding: 5px 8px;
+    border-radius: 4px; /* Cambiado a un borde más suave */
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* BEST SELLERS (ME LO QUITAN) */
+.best-sellers {
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.best-sellers h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.product-grid .grid-item {
+    text-align: center;
+    position: relative; /* Es importante para posicionar el overlay */
+    overflow: hidden; /* Oculta cualquier desbordamiento del overlay */
+    cursor: pointer; /* Indica que es interactivo */
+    border: 1px solid #eee; /* Añadido un borde ligero */
+    padding-bottom: 10px; /* Espacio para el texto normal */
+}
+
+.product-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease-in-out; /* Suave transición para la imagen */
+}
+
+.product-grid p {
+    margin: 5px 0 5px;
+    font-size: 0.9em;
+}
+
+.product-grid span {
+    font-weight: bold;
+    color: #cc0000;
+}
+
+/* Estilos para el texto que aparece al hacer hover */
+.text-desplegable {
+    position: absolute;
+    bottom: 0; /* Posición inicial, empieza desde abajo */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cubre todo el item */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente oscuro */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(100%); /* Desplazado completamente hacia abajo */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    padding: 10px;
+    box-sizing: border-box; /* Para incluir padding en el ancho/alto */
+}
+
+.text-desplegable p {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+.text-desplegable .btn-small {
+    background: white;
+    color: #333;
+    border-color: white;
+}
+
+.text-desplegable .btn-small:hover {
+    background: #e5d5cb;
+    color: #333;
+    border-color: #e5d5cb;
+}
+
+/* Estado hover para el grid-item */
+.product-grid .grid-item:hover .text-desplegable {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(0); /* Se desplaza a su posición normal */
+}
+
+.product-grid .grid-item:hover img {
+    transform: scale(1.05); /* Un pequeño zoom en la imagen al hacer hover */
+}
+
+/* Opcional: Ocultar el texto normal del producto al hacer hover */
+.product-grid .grid-item:hover p:not(.text-desplegable p),
+.product-grid .grid-item:hover span {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ver-mas-contenedor {
+    margin-top: 40px;
+}
+
+/* FOOTER */
+.main-footer {
+    background: #333;
+    color: white;
+    padding: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-column h3, .footer-column h4 {
+    color: #f0f0f0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.8;
+}
+
+.footer-column ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-column p {
+    margin-top: 10px;
+}
+
+.footer-column .social a {
+    color: white;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.footer-column .social a:hover {
+    color: #e5d5cb;
+}
+
+.footer-blog hr {
+    border-color: #555;
+    margin: 15px 0;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    background: #222;
+    padding: 10px;
+    font-size: 0.9em;
+}
