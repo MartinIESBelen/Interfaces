@@ -1,0 +1,15 @@
+#contenedores{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.azul strong{
+    color: blue;
+}
+
+@media (max-width: 1200px) {
+sidebar {
+ display: none; 
+} 
+}

@@ -1,0 +1,69 @@
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Layout general */
+body {
+    margin: 0;
+    display: flex;
+}
+
+/* Aside a la izquierda */
+#menu {
+    width: 200px;
+    background: #1e1e1e;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#menu h2 {
+    margin: 0;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+#contenido {
+    margin-left: 220px; /* espacio para el aside */
+    padding: 40px;
+    width: calc(100% - 220px);
+}
+
+.seccion {
+    padding: 60px 20px;
+    margin-bottom: 100px;
+    background: #f2f2f2;
+    border-radius: 10px;
+}
+
+/* Botón para volver arriba */
+#subir {
+    display: block;
+    width: 120px;
+    margin: 100px auto 0;
+    padding: 10px 0;
+    text-align: center;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#subir:hover {
+    background: #333;
+}

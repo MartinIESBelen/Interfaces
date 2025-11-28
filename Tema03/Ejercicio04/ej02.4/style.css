@@ -1,0 +1,26 @@
+#productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap:40px;
+    overflow-x: scroll;
+    scroll-snap-type:x mandatory;
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+}
+
+#productos div{
+    min-width: 50%;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
