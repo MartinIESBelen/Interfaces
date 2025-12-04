@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con estilo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <form action="#" method="post">
+
+    <h2>Formulario de Registro Completo</h2>
+
+    <!-- DATOS PERSONALES -->
+    <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre">
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required placeholder="Introduce tus apellidos">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="ejemplo@mail.com">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="000000000">
+    </fieldset>
+
+    <!-- DATOS DE ACCESO -->
+    <fieldset>
+        <legend>Datos de acceso</legend>
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" name="pass" required minlength="6" maxlength="20">
+
+        <label for="pass2">Repetir contraseña:</label>
+        <input type="password" id="pass2" name="pass2" required>
+    </fieldset>
+
+    <!-- SELECCIONES -->
+    <fieldset>
+        <legend>Preferencias</legend>
+
+        <!-- Radio Buttons -->
+        <p>Género:</p>
+        <label><input type="radio" name="genero" value="hombre"> Hombre</label>
+        <label><input type="radio" name="genero" value="mujer"> Mujer</label>
+        <label><input type="radio" name="genero" value="otro"> Otro</label>
+
+        <!-- Checkboxes -->
+        <p>Intereses:</p>
+        <label><input type="checkbox" name="deportes"> Deportes</label>
+        <label><input type="checkbox" name="musica"> Música</label>
+        <label><input type="checkbox" name="programacion"> Programación</label>
+
+        <!-- Select -->
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+            <option value="">Seleccione...</option>
+            <option value="es">España</option>
+            <option value="mx">México</option>
+            <option value="ar">Argentina</option>
+            <option value="co">Colombia</option>
+            <option value="cl">Chile</option>
+        </select>
+
+        <!-- Lista desplegable múltiple -->
+        <label for="lenguajes">Lenguajes que conoces:</label>
+        <select id="lenguajes" name="lenguajes[]" multiple size="4">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+        </select>
+    </fieldset>
+
+    <!-- FECHAS Y ARCHIVOS -->
+    <fieldset>
+        <legend>Información adicional</legend>
+
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <label for="hora">Hora preferida de contacto:</label>
+        <input type="time" id="hora" name="hora">
+
+        <label for="rango">Nivel de satisfacción (1-10):</label>
+        <input type="range" id="rango" name="rango" min="1" max="10">
+
+        <label for="archivo">Subir archivo:</label>
+        <input type="file" id="archivo" name="archivo">
+
+        <label for="color">Selecciona tu color favorito:</label>
+        <input type="color" id="color" name="color">
+    </fieldset>
+
+    <!-- TEXTO -->
+    <fieldset>
+        <legend>Comentarios</legend>
+
+        <label for="mensaje">Mensaje o comentarios:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Escribe aquí..."></textarea>
+    </fieldset>
+
+    <!-- BOTONES FINAL -->
+    <input type="submit" value="Enviar formulario">
+    <input type="reset" value="Restablecer">
+
+</form>
+</body>
+</html>

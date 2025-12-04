@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.buscador input {
+    padding: 5px;
+}
+.buscador button {
+    padding: 6px 10px;
+}
+
+/* HERO */
+.oferta {
+    display: flex;
+    align-items: center;
+    background: #e5d5cb;
+    padding: 40px 50px;
+    gap: 50px;
+}
+
+.oferta-img img {
+    width: 250px;
+}
+
+.oferta-info h2 {
+    margin: 0;
+}
+.oferta-info h3 {
+    margin-top: 5px;
+    font-weight: normal;
+}
+.btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 1px solid black;
+    background: white;
+}
+
+/* DOS TARJETAS */
+.dos-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.card {
+    text-align: center;
+}
+
+/* NUEVECITO */
+.nuevecito {
+    padding: 40px;
+    text-align: center;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.producto {
+    background: #eee;
+    padding: 20px;
+    width: 230px;
+    position: relative;
+}
+
+.nuevo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #b3e986;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/* ME LO QUITAN */
+.me-lo-quitan {
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.grid-productos .item {
+    text-align: center;
+}
+
+.ver-mas-contenedor {
+    margin-top: 30px;
+}
+
+/* FOOTER */
+footer {
+    background: #333;
+    color: white;
+    padding: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-grid ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    background: #222;
+    padding: 10px;
+}

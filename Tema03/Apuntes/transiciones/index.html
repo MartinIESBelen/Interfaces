@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Transiciones CSS</title>
+    <style>
+        /* Aquí va el CSS de las transiciones */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            width: 100%;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+        }
+
+        /* ---------------------------------- */
+        /* Ejemplo 1: Botón con un atajo simple */
+        /* ---------------------------------- */
+        .boton-prueba {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            
+            /* 1. DEFINICIÓN DE LA TRANSICIÓN */
+            /* Transiciona TODAS las propiedades en 0.4s con ritmo 'ease' */
+            transition: all 0.4s ease; 
+        }
+
+        /* CAMBIO DE ESTADO: Hover */
+        .boton-prueba:hover {
+            background-color: #e74c3c; /* Cambia el color */
+            transform: scale(1.1);      /* Crece un 10% */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* ---------------------------------- */
+        /* Ejemplo 2: Caja con múltiples transiciones y delay */
+        /* ---------------------------------- */
+        .caja-prueba {
+            width: 150px;
+            height: 150px;
+            background-color: #2ecc71; /* Verde */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            
+            /* 1. DEFINICIÓN DE LA TRANSICIÓN MÚLTIPLE */
+            transition: 
+                background-color 0.5s linear, /* El color cambia linealmente en 0.5s */
+                transform 0.8s ease-in,       /* La posición cambia lento al inicio en 0.8s */
+                opacity 0.3s;                 /* La opacidad cambia rápido en 0.3s */
+        }
+
+        /* CAMBIO DE ESTADO: Hover */
+        .caja-prueba:hover {
+            background-color: #9b59b6; /* Cambia a Púrpura */
+            transform: translateX(500px) rotate(180deg); /* Se mueve a la derecha y rota */
+            opacity: 0.7; /* Se vuelve ligeramente transparente */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Prueba de Transiciones CSS</h1>
+
+    <div class="ejemplo-container">
+        <h2>Transición Simple (Botón)</h2>
+        <button class="boton-prueba">Pasa el Ratón (All 0.4s ease)</button>
+    </div>
+
+    <div class="ejemplo-container">
+        <h2>Múltiples Transiciones</h2>
+        <div class="caja-prueba">Pasa el Ratón Aquí</div>
+        <p>Observa cómo la duración y el ritmo son diferentes para el color, la posición y la opacidad.</p>
+    </div>
+
+</body>
+</html>

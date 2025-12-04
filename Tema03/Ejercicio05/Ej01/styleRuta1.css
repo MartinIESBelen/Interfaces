@@ -8,6 +8,10 @@ sidebar {
     align-items: center;
 }
 
+body{
+    font-size: 20px;
+}
+
 .azul strong{
     color: blue;
 }
@@ -27,6 +31,7 @@ sidebar {
     grid-row: 1/ span 2;
     display: flex;
     flex-direction: column;
+    align-items: start;
 }
 
 
@@ -41,7 +46,44 @@ sidebar {
     grid-row: 2;
 }
 
+body{
+    font-size: 16px;
 }
-.azul strong{
-    color: blue;
+
+strong{display: block;}
+
+}
+.azul strong{color: blue;}
+
+@media (max-width: 600px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    #contenedor{
+        max-width: auto;
+        width: 100%;
+        margin: auto;
+    }
+
+    #contenedores div:first-child{
+    grid-column: 1;
+    grid-row: 1/ span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+strong{display: block;}
+
+body {font-size: 14px; /* tamaño pequeño */ }
+
+h1 {font-size: 20px; /* título reducido */}
+
+h2 {font-size: 18px;}
+
 }

@@ -1,0 +1,202 @@
+/* VARIABLES GLOBALES */
+:root {
+    --color-principal: #3498db; /* Azul */
+    --color-secundario: #2ecc71; /* Verde */
+    --color-fondo: #f4f6f7;
+    --color-borde: #ccc;
+    --tiempo-transicion: 0.3s;
+}
+
+/* ----------------------------------- */
+/* 1. Estilos Base y Contenedor */
+/* ----------------------------------- */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h2 {
+    color: var(--color-principal);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ----------------------------------- */
+/* 2. Fieldset y Grid Layout */
+/* ----------------------------------- */
+
+fieldset {
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    
+    /* Usamos Grid para organizar los campos dentro del Fieldset */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de campos */
+    gap: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--color-principal);
+    padding: 0 10px;
+}
+
+/* Las etiquetas y los inputs dentro de los fieldsets de datos (excepto Preferencias) */
+fieldset label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Asegura que los grupos de selección ocupen el espacio de una columna */
+fieldset p {
+    grid-column: span 1;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+/* Asegura que los campos de una sola entrada ocupen una columna completa */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="range"],
+input[type="file"],
+input[type="color"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color var(--tiempo-transicion), box-shadow var(--tiempo-transicion);
+}
+
+/* Textarea ocupa todo el ancho de la rejilla (2 columnas) */
+textarea {
+    grid-column: 1 / -1; 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-height: 100px;
+    transition: border-color var(--tiempo-transicion);
+}
+
+
+/* ----------------------------------- */
+/* 3. Pseudo-clases y Transiciones */
+/* ----------------------------------- */
+
+/* Transición suave para todos los elementos al ganar foco */
+input:focus, textarea:focus, select:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* Estilo para inputs requeridos que están vacíos (indicador visual) */
+input:required:not(:focus) {
+    border-left: 3px solid #e67e22; /* Borde naranja a la izquierda */
+}
+
+
+/* Estilo de los Radio Buttons y Checkboxes (alineación) */
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
+    margin-right: 5px;
+    transition: transform var(--tiempo-transicion);
+}
+
+/* Efecto al pasar el ratón sobre los elementos de selección */
+fieldset label:hover {
+    color: var(--color-principal);
+    cursor: pointer;
+}
+
+/* Efecto visual al marcar un checkbox o radio */
+fieldset input[type="radio"]:checked,
+fieldset input[type="checkbox"]:checked {
+    transform: scale(1.1);
+}
+
+/* ----------------------------------- */
+/* 4. Botones Finales */
+/* ----------------------------------- */
+
+input[type="submit"], 
+input[type="reset"] {
+    grid-column: span 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color var(--tiempo-transicion), transform var(--tiempo-transicion), box-shadow var(--tiempo-transicion);
+}
+
+/* Estilo del botón Enviar */
+input[type="submit"] {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+/* Estilo del botón Restablecer */
+input[type="reset"] {
+    background-color: #95a5a6; /* Gris */
+    color: white;
+}
+
+/* Efecto :hover y :active en los botones */
+input[type="submit"]:hover {
+    background-color: #2980b9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="reset"]:hover {
+    background-color: #7f8c8d;
+}
+
+input[type="submit"]:active, 
+input[type="reset"]:active {
+    transform: scale(0.98); /* Ligero hundimiento al hacer clic */
+}
+
+
+/* ----------------------------------- */
+/* 5. Ajuste para dispositivos móviles (Responsivo) */
+/* ----------------------------------- */
+
+@media (max-width: 650px) {
+    /* En pantallas pequeñas, cada campo ocupa una columna (se apilan) */
+    fieldset {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Asegura que los títulos y botones ocupen todo el ancho también */
+    fieldset p,
+    input[type="submit"], 
+    input[type="reset"] {
+        grid-column: span 1;
+    }
+}

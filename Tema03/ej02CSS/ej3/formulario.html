@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario estilo ejemplo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<h1>Estilos CSS para formularios</h1>
+<hr>
+
+<form id="miFormulario">
+
+    <div class="contenedor">
+
+        <div class="fila">
+            <label>Login:</label>
+            <input type="text">
+        </div>
+        <div class="fila">
+            <label>Password:</label>
+            <input type="password">
+        </div>
+        
+        <div class="fila">
+            <label>Descripción:</label>
+            <textarea rows="3">Contenido inicial...</textarea>
+        </div>
+        
+        <label>Posesiones:</label>
+
+        <div class="grupo">
+            <input type="checkbox"> Casa <br>
+            <input type="checkbox"> Ordenador <br>
+            <input type="checkbox"> Coche <br>
+            <input type="checkbox"> Moto <br>
+            <input type="checkbox"> Bicicleta
+        </div>
+
+        <label>SEXO:</label>
+        <div class="grupo">
+            <input type="radio" name="sexo"> Hombre <br>
+            <input type="radio" name="sexo"> Mujer
+        </div>
+
+        <div class="botones">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Vaciar">
+        </div>
+
+    </div>
+
+</form>
+
+</body>
+</html>

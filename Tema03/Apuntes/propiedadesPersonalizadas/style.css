@@ -1,0 +1,29 @@
+:root {
+  /* Declaración de la variable --color-principal */
+  --color-principal: #007bff; 
+  
+  /* Declaración de otra variable para el tamaño de fuente */
+  --fuente-tamano: 16px;
+}
+
+/*propiedad: var(--nombre-de-variable);*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.card {
+  /* Uso */
+  padding: var(--espaciado-base); 
+  margin: var(--espaciado-base);
+  border: 2px solid var(--color-principal);
+}
+
+.card h2 {
+  /* Uso */
+  color: var(--color-principal);
+}
+
+/* Si --color-no-definido no existe, se usará el color negro (#000) */
+/*background-color: var(--color-no-definido, #000);*/

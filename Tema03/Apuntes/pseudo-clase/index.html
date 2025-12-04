@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Pseudo-Clases CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        /* ---------------------------------- */
+        /* 1. Pseudo-clases de Interacción */
+        /* ---------------------------------- */
+
+        .interaccion-box {
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* :hover - Se activa al pasar el ratón */
+        .interaccion-box:hover {
+            background-color: #d0d3d4;
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* :active - Se activa mientras el elemento está siendo presionado (clic) */
+        .interaccion-box:active {
+            background-color: #2c3e50;
+            color: white;
+            transform: scale(0.98);
+        }
+
+        /* :focus - Se activa cuando el elemento recibe el foco (usando Tab o haciendo clic) */
+        input[type="text"]:focus {
+            border: 2px solid #3498db;
+            outline: none; /* Elimina el contorno predeterminado del navegador */
+        }
+        
+        /* :focus-within - Se activa en el contenedor si un hijo (el input) tiene el foco */
+        .form-container:focus-within {
+            background-color: #e8f8f5;
+            border-left: 5px solid #1abc9c;
+        }
+        
+        /* :disabled y :enabled */
+        input:disabled {
+            background-color: #eee;
+            cursor: not-allowed;
+        }
+
+
+        /* ---------------------------------- */
+        /* 2. Pseudo-clases de Enlace y Formulario */
+        /* ---------------------------------- */
+
+        /* :link, :visited, :checked */
+        .seccion-enlaces a:link {
+            color: #ce1616; /* Azul para no visitados */
+        }
+        .seccion-enlaces a:visited {
+            color: #44da26; /* Morado para visitados */
+        }
+        
+        /* :checked - Se activa cuando el checkbox está marcado */
+        .toggle-label {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        #checkbox-test:checked + .toggle-label {
+            color: #27ae60; /* El texto del label se pone verde */
+            font-weight: bold;
+        }
+
+
+        /* ---------------------------------- */
+        /* 3. Pseudo-clases Estructurales */
+        /* ---------------------------------- */
+
+        .lista-estructural {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .lista-estructural li {
+            padding: 8px 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* :first-child - Selecciona el primer elemento */
+        .lista-estructural li:first-child {
+            font-weight: bold;
+            color: #e74c3c;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* :last-child - Selecciona el último elemento */
+        .lista-estructural li:last-child {
+            font-style: italic;
+            color: blueviolet;
+        }
+        
+        /* :nth-child(2n) - Selecciona todos los elementos pares (2, 4, 6...) */
+        .lista-estructural li:nth-child(2n) {
+            background-color: #aec2cc;
+        }
+
+        /* :not() - Selecciona todos los elementos excepto el especificado */
+        .lista-estructural li:not(:last-child)::after {
+            content: " •";
+            color: #aaa;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplos de Pseudo-Clases en CSS</h1>
+
+    <h2>1. Interacción Directa (:hover, :active)</h2>
+    <div class="interaccion-box">
+        Pasa el ratón (<strong>:hover</strong>) y haz clic (<strong>:active</strong>) en esta caja.
+    </div>
+
+    <h2>2. Foco y Formulario (:focus, :focus-within, :checked, :disabled)</h2>
+    <div class="form-container" style="padding: 10px;">
+        <p>Escribe aquí para ver el foco:</p>
+        <input type="text" placeholder="Escribe aquí..." style="padding: 8px; border: 1px solid #ccc;">
+        <input type="text" value="Deshabilitado" disabled>
+        <p>El contenedor cambia (<strong>:focus-within</strong>) cuando el input está activo.</p>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <input type="checkbox" id="checkbox-test">
+        <label for="checkbox-test" class="toggle-label">Marca la casilla (<strong>:checked</strong>)</label>
+    </div>
+
+
+    <h2>3. Estado de Enlaces (:link, :visited)</h2>
+    <div class="seccion-enlaces">
+        <p><a href="https://www.google.com" target="_blank">Enlace de Google (Probablemente :visited)</a></p>
+        <p><a href="#enlace-nuevo">Enlace nuevo y no visitado (<strong>:link</strong>)</a></p>
+    </div>
+
+    <h2>4. Estructurales y Condicionales (:nth-child, :first-child, :not)</h2>
+    <ul class="lista-estructural">
+        <li>Ítem 1 (<strong>:first-child</strong> y Par/Impar)</li>
+        <li>Ítem 2 (Par)</li>
+        <li>Ítem 3 (Impar)</li>
+        <li>Ítem 4 (Par)</li>
+        <li>Ítem 5 (Impar)</li>
+        <li>Ítem 6 (<strong>:last-child</strong> y Par)</li>
+    </ul>
+
+</body>
+</html>
